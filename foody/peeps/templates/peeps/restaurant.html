@@ -1,0 +1,60 @@
+{% load static %}
+{% load rest_framework %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Restaurant</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static '/css/form-restaurant.css' %}">
+        <link rel="stylesheet" href="{% static '/css/buttons.css' %}">
+    </head>
+    <body>
+       <form class="form" action="{% url 'restaurants' %}" method="POST">
+        {% csrf_token %}
+        
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Restaurant name">
+                <label for="name">Restaurant name</label>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="" name="direction" placeholder="Your direction">
+                <label for="direction">Your direction</label>
+            </div>
+
+            <div class="form-group">
+                <input name="phone" id="message" name="phone" placeholder="Your phone">
+                <label for="phone">Your phone</label>
+            </div>
+
+            <div class="spacer10"></div>
+
+            <div class="centered-btn-wrapper">
+                <button type="submit" class="btn" value="Save">Save</button>
+            </div>
+       </form>
+
+        {% comment %} {% if restaurants %} {% endcomment %}
+        {% for restaurant in restaurants %}
+        
+        <tr>
+            <td>{{restaurant.name}}</td>
+           
+        </tr>
+      
+        {% endfor %}
+        {% comment %} {% endif %} {% endcomment %}
+
+ 
+        
+        <script src="" async defer></script>
+    </body>
+</html>
