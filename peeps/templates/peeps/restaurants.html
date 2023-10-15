@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static '/css/common.css' %}">
+        <link rel="stylesheet" href="{% static '/css/nav.css' %}">
+        <link rel="stylesheet" href="{% static '/css/homepage.css' %}">
+        <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+        <link rel="stylesheet" href="{% static '/css/skewed-header.css' %}">
+        <link rel="stylesheet" href="{% static '/css/helpers.css' %}">
+        <link rel="stylesheet" href="{% static '/css/form-restaurant.css' %}">
+        <link rel="stylesheet" href="{% static '/css/buttons.css' %}">
+        <link rel="stylesheet" href="{% static '/css/restaurant.css' %}">
+    </head>
+    <body>
+        <div class="skewed-header">
+            <div class="header-bg" style="background-image: url('{% static "image/contact-image.jpg" %}');"></div>
+
+            <div class="skewed-header-wrapper">
+                <div class="skewed-header-content">
+                    <div class="heading-wrapper">
+                        <h1>Restaurant</h1>
+                    </div>
+
+                    <div class="links-wrapper">
+                        <div class="navlink-wrapper">
+                            <a href="{% url 'index' %}">Home</a>
+                        </div>
+        
+                        <div class="navlink-wrapper">
+                            <a href="{% url 'about' %}">About</a>
+                        </div>
+        
+                        <div class="navlink-wrapper">
+                            <a href="{% url 'menu' %}">Menu</a>
+                        </div>
+        
+                        <div class="navlink-wrapper">
+                            <a href="{% url 'contact' %}">Contact</a>
+                        </div>
+
+                        <div class="navlink-wrapper">
+                            <a href="{% url 'restaurants' %}">Restaurant</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="page-division">
+            <form class="form" action="{% url 'restaurants' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Restaurant name">
+                    <label for="name">Restaurant name</label>
+                </div>
+            
+                <div class="form-group">
+                    <input type="text" id="" name="direction" placeholder="Your direction">
+                    <label for="direction">Your direction</label>
+                </div>
+    
+                <div class="form-group">
+                    <input name="phone" id="message" name="phone" placeholder="Your phone">
+                    <label for="phone">Your phone</label>
+                </div>
+    
+                <div class="spacer10"></div>
+    
+                <div class="centered-btn-wrapper">
+                    <button type="submit" class="btn" value="Save">Save</button>
+                </div>
+            </form>
+                   
+            
+            <div class="restaurant-detail">
+                <h2>Restaurants</h2>
+                             
+               
+                <table>
+                    {% for restaurant in restaurants %}
+                    <tr>
+                        <td>{{restaurant.name}}</td>
+                    </tr>
+                        
+
+                    {% endfor %}
+                </table>
+               </div>
+            </div>
+            
+        </div>
+        
+
+        <div class="spacer60"></div>
+
+
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="{% static "/image/image-logo.png" %}" alt="Logo">
+            </div>
+
+            <div class="footer-phone-hours">
+                <span class="phone">
+                    584 593 972
+                </span>
+
+                <span class="hours">
+                    10 am - Midnight
+                </span>
+            </div>
+
+            <div class="links-wrapper">
+                <div class="navlink-wrapper">
+                    <a href="{% url 'index' %}">Home</a>
+                </div>
+
+                <div class="navlink-wrapper">
+                    <a href="{% url 'about' %}">About</a>
+                </div>
+
+                <div class="navlink-wrapper">
+                    <a href="{% url 'menu' %}">Menu</a>
+                </div>
+
+                <div class="navlink-wrapper">
+                    <a href="{% url 'contact' %}">Contact</a>
+                </div>
+
+                <div class="navlink-wrapper">
+                    <a href="{% url 'restaurants' %}">Restaurant</a>
+                </div>
+            </div>
+
+            <div class="social-media-icons-wrapper">
+                <a href="#"></a>
+                <i class="fa-brands fa-instagram"></i>
+
+                <a href="#"></a>
+                <i class="fa-brands fa-twitter"></i>
+
+                <a href="#"></a>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+
+            <div class="copyright-wrapper">
+                &copy; 2023 &#124; All rights reserved
+            </div>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

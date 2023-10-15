@@ -1,0 +1,42 @@
+.squares-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.squares-wrapper > .squares {
+    width: 1000px;
+}
+
+.squares-wrapper > .squares > .square {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: -4px;
+}
+
+.square > .image-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.square > .square-text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 42px;
+}
+
+.square > .square-text-wrapper h1 {
+    color: #cea135;
+}
+
+.square > .square-text-wrapper > .recipe-wrapper {
+    padding: 0px 15px;
+    background-color: #cea135;
+    color: #11122b;
+    width: 100px;
+    border-radius: 2px;
+}
+

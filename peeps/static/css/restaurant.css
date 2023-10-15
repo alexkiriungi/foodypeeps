@@ -1,0 +1,19 @@
+.page-division {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.restaurant-detail {
+    width: 100%;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-left: 20px;
+    grid-gap: 0px;
+}
+
+table {
+    margin-top: -275px;
+}
