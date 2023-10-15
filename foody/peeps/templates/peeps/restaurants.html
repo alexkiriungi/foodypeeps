@@ -19,6 +19,7 @@
         <link rel="stylesheet" href="{% static '/css/helpers.css' %}">
         <link rel="stylesheet" href="{% static '/css/form-restaurant.css' %}">
         <link rel="stylesheet" href="{% static '/css/buttons.css' %}">
+        <link rel="stylesheet" href="{% static '/css/restaurant.css' %}">
     </head>
     <body>
         <div class="skewed-header">
@@ -59,7 +60,6 @@
             <form class="form" action="{% url 'restaurants' %}" method="POST">
                 {% csrf_token %}
 
-                        
                 <div class="form-group">
                     <input type="text" id="name" name="name" placeholder="Restaurant name">
                     <label for="name">Restaurant name</label>
@@ -85,15 +85,20 @@
             
             <div class="restaurant-detail">
                 <h2>Restaurants</h2>
-                {% for restaurant in restaurants %}                
+                             
                
-                <ul>
-                    <li>{{restaurant.name}}</li>
-                   
-                </ul>
+                <table>
+                    {% for restaurant in restaurants %}
+                    <tr>
+                        <td>{{restaurant.name}}</td>
+                    </tr>
+                        
+
+                    {% endfor %}
+                </table>
                </div>
             </div>
-            {% endfor %}
+            
         </div>
         
 

@@ -71,14 +71,3 @@
     transform: translate(1rem);
 }
 
-.page-division {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.restaurant-detail {
-    width: 400px;
-    display: grid;
-    grid-template-columns: 2fr;
-}
