@@ -1,4 +1,4 @@
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .body {
         overflow-x: hidden;
     }
@@ -124,7 +124,7 @@
 
 }
 /* max-width of 375px*/
-@media (max-width: 375px) {
+@media screen and (min-width: 321px) and (max-width: 375px) {
     .body {
         overflow-x: hidden;
     }
@@ -250,7 +250,7 @@
 
 }
 
-@media (max-width: 425px) {
+@media screen and (min-width:376px) and (max-width: 425px) {
     .body {
         overflow-x: hidden;
     }
