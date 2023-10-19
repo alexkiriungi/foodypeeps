@@ -1,32 +1,37 @@
 @media screen and (max-width: 320px) {
-    .body {
+    html,body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
         overflow-x: hidden;
+        margin: 0;
     }
 
     .navigation-wrapper {
         flex-direction: column;
         height: 100%;
-        width: 130%;
         margin: 0;
-        margin-left: -130px;
+        /* margin-left: -130px; */
     }
 
     .navigation-wrapper > .left-column {
         order: 2;
         margin-top: 10px;
         margin-bottom: 15px;
-        margin-left: 60px;
+        /* margin-left: 60px; */
     }
 
     .navigation-wrapper > .center-column {
         order: 1;
-        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        /* width: 100%; */
     }
 
     .navigation-wrapper > .right-column {
         order: 3;
         margin-top: 15px;
-        margin-left: 60px;
+        /* margin-left: 60px; */
     }
 
     .links-wrapper {
@@ -43,12 +48,14 @@
 
     .hero-section {
         padding: 50px 10px;
-        width: 144%;
+        margin: 0;
+        
     }
 
     .features-section {
         height: 100%;
-        width: 150%;
+        margin: 0;
+        /* width: 100%; */
     }
 
     .features-section > .column-wrapper {
@@ -58,11 +65,6 @@
 
     .footer {
         height: 100%;
-        width: 150%;
-    }
-
-    .google-map {
-        width: 150%;
     }
 
     .skewed-header > .skewed-header-wrapper > .skewed-header-content {
@@ -125,34 +127,33 @@
 }
 /* max-width of 375px*/
 @media screen and (min-width: 321px) and (max-width: 375px) {
-    .body {
+    html,body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
         overflow-x: hidden;
+        margin: 0;
     }
 
     .navigation-wrapper {
         flex-direction: column;
         height: 100%;
-        width: 110%;
         margin: 0;
-        margin-left: -50px;
     }
 
     .navigation-wrapper > .left-column {
         order: 2;
         margin-top: 10px;
         margin-bottom: 15px;
-        margin-left: 60px;
     }
 
     .navigation-wrapper > .center-column {
         order: 1;
-        width: 100%;
     }
 
     .navigation-wrapper > .right-column {
         order: 3;
         margin-top: 15px;
-        margin-left: 60px;
     }
 
     .links-wrapper {
@@ -169,12 +170,10 @@
 
     .hero-section {
         padding: 50px 10px;
-        width: 145%;
     }
 
     .features-section {
         height: 100%;
-        width: 150%;
     }
 
     .features-section > .column-wrapper {
@@ -183,12 +182,11 @@
     }
 
     .google-map {
-        width: 150%;
+        width: 100%;
     }
 
     .footer {
         height: 100%;
-        width: 150%;
     }
 
     .skewed-header > .skewed-header-wrapper > .skewed-header-content {
@@ -251,16 +249,18 @@
 }
 
 @media screen and (min-width:376px) and (max-width: 425px) {
-    .body {
+    html,body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
         overflow-x: hidden;
+        margin: 0;
     }
 
     .navigation-wrapper {
         flex-direction: column;
         height: 100%;
-        width: 115%;
         margin: 0;
-        margin-left: -50px;
     }
 
     .navigation-wrapper > .left-column {
@@ -271,7 +271,6 @@
 
     .navigation-wrapper > .center-column {
         order: 1;
-        width: 100%;
     }
 
     .navigation-wrapper > .right-column {
@@ -293,12 +292,10 @@
 
     .hero-section {
         padding: 50px 10px;
-        width: 145%;
     }
 
     .features-section {
         height: 100%;
-        width: 150%;
     }
 
     .features-section > .column-wrapper {
@@ -307,12 +304,11 @@
     }
 
     .google-map {
-        width: 150%;
+        width: 100%;
     }
 
     .footer {
         height: 100%;
-        width: 150%;
     }
 
     .skewed-header > .skewed-header-wrapper > .skewed-header-content {
